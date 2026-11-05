@@ -1,0 +1,38 @@
+# core
+numpy
+pandas
+scipy
+matplotlib
+seaborn
+pyarrow
+tqdm
+joblib
+pyyaml
+
+# notebooks
+jupyterlab
+ipykernel
+
+# astronomy
+astropy
+astroquery
+gaiadr3-zeropoint
+
+# modelling
+scikit-learn
+hdbscan
+umap-learn
+
+# MLOps
+mlflow
+
+# API
+fastapi
+uvicorn
+pydantic
+httpx
+python-multipart
+
+# dev
+pytest
+ruff
