@@ -1,0 +1,23 @@
+{
+    "run_started_utc": "2026-11-17T05:42:30.627478+00:00",
+    "python_version": "3.12.7 | packaged by Anaconda, Inc. | (main, Oct  4 2024, 13:17:27) [MSC v.1929 64 bit (AMD64)]",
+    "platform": "Windows-11-10.0.26300-SP0",
+    "random_seed": 42,
+    "dataset": {
+        "filename": "gaia_subset_raw.csv",
+        "sha256": "a4155571be1192c42f9d92533e679d1f740d48bf793cb61cc11f80ac23fef8cc",
+        "rows": 249295,
+        "columns": 16
+    },
+    "packages": {
+        "numpy": "2.5.4",
+        "pandas": "3.1.1",
+        "scipy": "1.18.1",
+        "scikit-learn": "1.9.1",
+        "umap-learn": "0.5.12",
+        "hdbscan": "0.8.44",
+        "astropy": "8.0.2",
+        "numba": "0.68.1",
+        "pynndescent": "0.7.0"
+    }
+}
