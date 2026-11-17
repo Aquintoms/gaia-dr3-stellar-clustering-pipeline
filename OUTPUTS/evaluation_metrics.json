@@ -1,0 +1,64 @@
+{
+  "dataset_rows": 249295,
+  "feature_count": 6,
+  "features": [
+    "x",
+    "y",
+    "z",
+    "tangential_velocity",
+    "abs_g_mag",
+    "bp_rp"
+  ],
+  "kmeans": {
+    "cluster_count": 4,
+    "silhouette": {
+      "metric": "silhouette_score",
+      "value": 0.323606884683693,
+      "sample_size": 10000,
+      "sampling": "numpy.default_rng(seed=42), without replacement",
+      "feature_space": "standardized six-dimensional feature space"
+    },
+    "parameters": {
+      "n_clusters": 4,
+      "random_state": 42,
+      "n_init": 10
+    }
+  },
+  "umap": {
+    "embedding_dimensions": 2,
+    "parameters": {
+      "n_neighbors": 50,
+      "min_dist": 0.1,
+      "n_components": 2,
+      "random_state": 42
+    }
+  },
+  "hdbscan": {
+    "cluster_count_excluding_noise": 26,
+    "noise_count": 210655,
+    "clustered_count": 38640,
+    "noise_percentage": 84.50029082011272,
+    "dbcv": {
+      "metric": "hdbscan.validity.validity_index",
+      "value": 0.21781942607891674,
+      "sample_size": 20000,
+      "eligible_non_noise_rows": 38640,
+      "sampling": "numpy.random.seed(42) / legacy RandomState, without replacement",
+      "noise_label_excluded_before_sampling": true,
+      "feature_space": "two-dimensional UMAP embedding",
+      "interpretation_note": "This is not a full-catalogue DBCV score; it is calculated on a sample of non-noise observations in the UMAP embedding, matching the evaluation procedure in the current notebook.",
+      "status": "calculated"
+    },
+    "parameters": {
+      "min_cluster_size": 500,
+      "min_samples": 500,
+      "cluster_selection_method": "leaf"
+    }
+  },
+  "evaluation_notes": [
+    "Silhouette is sampled on 10,000 rows in the standardized 6D feature space.",
+    "DBCV is sampled on up to 20,000 non-noise rows in the 2D UMAP embedding.",
+    "The two metrics use different spaces and sampling procedures; they are not directly comparable.",
+    "HDBSCAN label -1 denotes noise/unassigned observations, not a verified astrophysical class."
+  ]
+}

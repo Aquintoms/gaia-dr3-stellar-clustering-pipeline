@@ -4,3 +4,27 @@ mlruns/
 __pycache__/
 *.parquet
 *.ipynb_checkpoints/
+
+# Large serialized models
+MODEL/*.joblib
+
+# Large processed datasets
+DATA/processed/*.parquet
+
+# Large numerical arrays
+OUTPUTS/*.npy
+
+# Generated clustered catalogue
+OUTPUTS/clustered_stars.parquet
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Jupyter checkpoints
+.ipynb_checkpoints/

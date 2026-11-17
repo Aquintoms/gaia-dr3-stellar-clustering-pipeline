@@ -1,0 +1,64 @@
+{
+  "project": "Gaia DR3 Unsupervised Clustering",
+  "training_script_version": "1.0.0",
+  "trained_utc": "2026-11-17T10:58:14.373962+00:00",
+  "python_version": "3.12.7 | packaged by Anaconda, Inc. | (main, Oct  4 2024, 13:17:27) [MSC v.1929 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "random_seed": 42,
+  "input": {
+    "path": "C:\\Users\\HP\\OneDrive - Strathmore University\\STRATH UNI\\SECOND YEAR\\SEMESTER I\\UNITS\\Applied Machine Learning in Data Science\\AML FINAL PROJECT\\DATA\\processed\\gaia_engineered.parquet",
+    "sha256": "38d5c00cd88c101b8bdb8d329bc2130f1b4ee6edfe683876fb17d86a6944c3ed",
+    "rows": 249295,
+    "feature_columns_in_order": [
+      "x",
+      "y",
+      "z",
+      "tangential_velocity",
+      "abs_g_mag",
+      "bp_rp"
+    ]
+  },
+  "models": {
+    "standard_scaler": {},
+    "kmeans": {
+      "n_clusters": 4,
+      "random_state": 42,
+      "n_init": 10
+    },
+    "umap": {
+      "n_neighbors": 50,
+      "min_dist": 0.1,
+      "n_components": 2,
+      "random_state": 42
+    },
+    "hdbscan": {
+      "min_cluster_size": 500,
+      "min_samples": 500,
+      "cluster_selection_method": "leaf"
+    }
+  },
+  "package_versions": {
+    "numpy": "2.5.4",
+    "pandas": "3.1.1",
+    "scikit-learn": "1.9.1",
+    "umap-learn": "0.5.12",
+    "hdbscan": "0.8.44",
+    "joblib": "1.6.0",
+    "numba": "0.68.1",
+    "pynndescent": "0.7.0",
+    "pyarrow": "26.0.1"
+  },
+  "prediction_support": {
+    "hdbscan_prediction_data_generated": true,
+    "method": "hdbscan.approximate_predict",
+    "note": "Approximate assignment to existing fitted clusters; does not discover new clusters."
+  },
+  "outputs": {
+    "clustered_catalogue": "C:\\Users\\HP\\OneDrive - Strathmore University\\STRATH UNI\\SECOND YEAR\\SEMESTER I\\UNITS\\Applied Machine Learning in Data Science\\AML FINAL PROJECT\\OUTPUTS\\clustered_stars.parquet",
+    "hdbscan_cluster_summary": "C:\\Users\\HP\\OneDrive - Strathmore University\\STRATH UNI\\SECOND YEAR\\SEMESTER I\\UNITS\\Applied Machine Learning in Data Science\\AML FINAL PROJECT\\OUTPUTS\\hdbscan_cluster_summary.csv",
+    "kmeans_cluster_summary": "C:\\Users\\HP\\OneDrive - Strathmore University\\STRATH UNI\\SECOND YEAR\\SEMESTER I\\UNITS\\Applied Machine Learning in Data Science\\AML FINAL PROJECT\\OUTPUTS\\kmeans_cluster_summary.csv",
+    "umap_embeddings": "C:\\Users\\HP\\OneDrive - Strathmore University\\STRATH UNI\\SECOND YEAR\\SEMESTER I\\UNITS\\Applied Machine Learning in Data Science\\AML FINAL PROJECT\\OUTPUTS\\umap_embeddings.npy",
+    "scaled_features": "C:\\Users\\HP\\OneDrive - Strathmore University\\STRATH UNI\\SECOND YEAR\\SEMESTER I\\UNITS\\Applied Machine Learning in Data Science\\AML FINAL PROJECT\\OUTPUTS\\scaled_features.npy",
+    "evaluation_metrics": "C:\\Users\\HP\\OneDrive - Strathmore University\\STRATH UNI\\SECOND YEAR\\SEMESTER I\\UNITS\\Applied Machine Learning in Data Science\\AML FINAL PROJECT\\OUTPUTS\\evaluation_metrics.json"
+  }
+}
