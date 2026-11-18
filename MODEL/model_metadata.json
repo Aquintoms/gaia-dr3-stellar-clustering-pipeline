@@ -6,7 +6,7 @@
   "platform": "Windows-11-10.0.26300-SP0",
   "random_seed": 42,
   "input": {
-    "path": "C:\\Users\\HP\\OneDrive - Strathmore University\\STRATH UNI\\SECOND YEAR\\SEMESTER I\\UNITS\\Applied Machine Learning in Data Science\\AML FINAL PROJECT\\DATA\\processed\\gaia_engineered.parquet",
+    "path": "DATA/processed/gaia_engineered.parquet",
     "sha256": "38d5c00cd88c101b8bdb8d329bc2130f1b4ee6edfe683876fb17d86a6944c3ed",
     "rows": 249295,
     "feature_columns_in_order": [
@@ -54,11 +54,11 @@
     "note": "Approximate assignment to existing fitted clusters; does not discover new clusters."
   },
   "outputs": {
-    "clustered_catalogue": "C:\\Users\\HP\\OneDrive - Strathmore University\\STRATH UNI\\SECOND YEAR\\SEMESTER I\\UNITS\\Applied Machine Learning in Data Science\\AML FINAL PROJECT\\OUTPUTS\\clustered_stars.parquet",
-    "hdbscan_cluster_summary": "C:\\Users\\HP\\OneDrive - Strathmore University\\STRATH UNI\\SECOND YEAR\\SEMESTER I\\UNITS\\Applied Machine Learning in Data Science\\AML FINAL PROJECT\\OUTPUTS\\hdbscan_cluster_summary.csv",
-    "kmeans_cluster_summary": "C:\\Users\\HP\\OneDrive - Strathmore University\\STRATH UNI\\SECOND YEAR\\SEMESTER I\\UNITS\\Applied Machine Learning in Data Science\\AML FINAL PROJECT\\OUTPUTS\\kmeans_cluster_summary.csv",
-    "umap_embeddings": "C:\\Users\\HP\\OneDrive - Strathmore University\\STRATH UNI\\SECOND YEAR\\SEMESTER I\\UNITS\\Applied Machine Learning in Data Science\\AML FINAL PROJECT\\OUTPUTS\\umap_embeddings.npy",
-    "scaled_features": "C:\\Users\\HP\\OneDrive - Strathmore University\\STRATH UNI\\SECOND YEAR\\SEMESTER I\\UNITS\\Applied Machine Learning in Data Science\\AML FINAL PROJECT\\OUTPUTS\\scaled_features.npy",
-    "evaluation_metrics": "C:\\Users\\HP\\OneDrive - Strathmore University\\STRATH UNI\\SECOND YEAR\\SEMESTER I\\UNITS\\Applied Machine Learning in Data Science\\AML FINAL PROJECT\\OUTPUTS\\evaluation_metrics.json"
+    "clustered_catalogue": "OUTPUTS/clustered_stars.parquet",
+    "hdbscan_cluster_summary": "OUTPUTS/hdbscan_cluster_summary.csv",
+    "kmeans_cluster_summary": "OUTPUTS/kmeans_cluster_summary.csv",
+    "umap_embeddings": "OUTPUTS/umap_embeddings.npy",
+    "scaled_features": "OUTPUTS/scaled_features.npy",
+    "evaluation_metrics": "OUTPUTS/evaluation_metrics.json"
   }
 }
