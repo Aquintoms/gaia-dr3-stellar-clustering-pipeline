@@ -303,12 +303,22 @@ These checks establish that the saved artifacts can be loaded and that the teste
 - Silhouette and DBCV were evaluated on different samples and representations, so their numeric values should not be ranked directly against one another.
 - Approximate prediction assigns new records to existing fitted structures; it does not refit the clustering models or discover new clusters.
 
-## Gaia data acknowledgement
+## Gaia data acknowledgement and citations
 
-This project uses data from the European Space Agency's Gaia mission, processed by the Gaia Data Processing and Analysis Consortium (DPAC). Please retain the official Gaia acknowledgement and citation guidance when reusing or presenting the underlying catalogue data:
+The Gaia Data Release 3 Archive requests that users of Gaia DR3 data include the following acknowledgement and cite both the Gaia mission paper and the Gaia DR3 release paper. The acknowledgement below is reproduced using the wording supplied in the [official Gaia DR3 credit and citation instructions](https://gea.esac.esa.int/archive/documentation/GDR3/Miscellaneous/sec_credit_and_citation_instructions/):
+
+This work has made use of data from the European Space Agency (ESA) mission Gaia (https://www.cosmos.esa.int/gaia), processed by the Gaia Data Processing and Analysis Consortium (DPAC, https://www.cosmos.esa.int/web/gaia/dpac/consortium). Funding for the DPAC has been provided by national institutions, in particular the institutions participating in the Gaia Multilateral Agreement.
+
+### Required Gaia references
+
+1. Gaia Collaboration, T. Prusti, J. H. J. de Bruijne, et al. (2016). **The Gaia mission.** *Astronomy & Astrophysics*, 595, A1. https://doi.org/10.1051/0004-6361/201629272
+2. Gaia Collaboration, A. Vallenari, A. G. A. Brown, et al. (2023). **Gaia Data Release 3: Summary of the content and survey properties.** *Astronomy & Astrophysics*, 674, A1. https://doi.org/10.1051/0004-6361/202243940
+
+The Gaia Archive also lists additional Gaia DR3 content and validation papers that should be cited where relevant to the catalogue products or processing used. Consult the [official credit and citation instructions](https://gea.esac.esa.int/archive/documentation/GDR3/Miscellaneous/sec_credit_and_citation_instructions/) and the [Gaia DR3 papers list](https://www.cosmos.esa.int/web/gaia/dr3-papers) when preparing further academic work.
+
+Additional data access and documentation resources:
 
 - [Gaia DR3 documentation](https://gea.esac.esa.int/archive/documentation/GDR3/)
-- [Gaia DR3 credit and citation instructions](https://gea.esac.esa.int/archive/documentation/GDR3/Miscellaneous/sec_credit_and_citation_instructions/)
 - [Gaia ESA Archive](https://gea.esac.esa.int/archive/)
 
 ## Project repository
