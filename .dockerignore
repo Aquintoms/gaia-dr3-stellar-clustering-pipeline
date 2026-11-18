@@ -1,0 +1,15 @@
+# The image only needs the API source and its runtime dependencies.
+# Large model files and the clustered catalogue are mounted read-only at runtime.
+.venv/
+venv/
+.git/
+__pycache__/
+**/__pycache__/
+*.py[cod]
+*.ipynb
+DATA/
+MODEL/
+NOTEBOOK/
+OUTPUTS/
+REPORTS/
+SCRIPTS/
