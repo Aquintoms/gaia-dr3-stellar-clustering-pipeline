@@ -28,3 +28,28 @@ env/
 
 # Jupyter checkpoints
 .ipynb_checkpoints/
+
+# LaTeX / Beamer temporary compilation files
+PRESENTATION/*.aux
+PRESENTATION/*.bbl
+PRESENTATION/*.bcf
+PRESENTATION/*.blg
+PRESENTATION/*.fdb_latexmk
+PRESENTATION/*.fls
+PRESENTATION/*.lof
+PRESENTATION/*.log
+PRESENTATION/*.lot
+PRESENTATION/*.nav
+PRESENTATION/*.out
+PRESENTATION/*.run.xml
+PRESENTATION/*.snm
+PRESENTATION/*.synctex.gz
+PRESENTATION/*.toc
+PRESENTATION/*.vrb
+PRESENTATION/*.xdv
+
+# Temporary LaTeX build directory
+PRESENTATION/build/
+
+# Private presenter copy containing speaking notes/comments
+PRESENTATION/Gaia_DR3_Stellar_Clustering_Presentation.pdf
