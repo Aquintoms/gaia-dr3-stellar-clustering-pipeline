@@ -184,9 +184,22 @@ OUTPUTS/
 
 Other generated outputs include evaluation metrics, cluster summaries, cluster-membership tables, K-Means centres in physical units, scaled features, UMAP embeddings, and environment information.
 
-**Important for a fresh clone:** the large fitted model files, processed catalogue, and generated arrays are not included in the normal GitHub source checkout. A versioned artifact bundle or an approved institutional storage location must be provided separately and copied into the expected `MODEL/` and `OUTPUTS/` paths. No public artifact-download URL is specified in this README. The UMAP reducer is particularly large and exceeds GitHub's ordinary 100 MB per-file limit, so it should not be added to a normal Git commit.
+**Download the versioned artifacts:** The project data and fitted models are distributed separately from the normal Git source checkout in the [GitHub v1.0.0 Reproducibility Release](https://github.com/Aquintoms/gaia-dr3-stellar-clustering-pipeline/releases/tag/v1.0.0).
 
-Keep the artifact bundle associated with the same code and model configuration used to generate it. The API metadata and verification report should be checked when restoring artifacts.
+The release contains four relevant assets:
+
+- `api-runtime-bundle.zip` — required to run the API. Contains the fitted models, metadata, label mapping, and clustered catalogue. Extract it into the repository root to populate `MODEL/` and `OUTPUTS/`.
+- `pipeline-inputs.zip` — contains the original Gaia DR3 subset CSV. Extract it into the repository root to populate `DATA/` when reproducing the scripted data pipeline.
+- `supplementary-analysis-bundle.zip` — contains additional notebook snapshots, processed outputs, evaluation results, numerical arrays, cluster summaries, and figures. This bundle is optional for running the API.
+- `checksums.sha256` — contains SHA-256 checksums for verifying the three ZIP archives before extraction.
+
+For a fresh clone, download the API Runtime Bundle and extract it into the repository root before starting the API or Docker deployment. The supplied fitted models are loaded at runtime; they do not need to be retrained. To reproduce the data pipeline, also download and extract the Pipeline Inputs package.
+
+The ZIP archives preserve the project directory structure. Extract them into the repository root, not into an additional nested folder. Keep the downloaded archives outside the Git source checkout or in an untracked location.
+
+The UMAP reducer is particularly large and exceeds GitHub's ordinary 100 MB per-file limit. The fitted models, processed catalogue, and generated arrays are therefore distributed through the versioned release rather than ordinary Git commits.
+
+Keep the artifact bundle associated with the same code and model configuration used to generate it. Check the supplied checksums and the API metadata and verification report when restoring artifacts.
 
 ## Running the API locally
 
