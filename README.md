@@ -184,7 +184,7 @@ OUTPUTS/
 
 Other generated outputs include evaluation metrics, cluster summaries, cluster-membership tables, K-Means centres in physical units, scaled features, UMAP embeddings, and environment information.
 
-**Download the versioned artifacts:** The project data and fitted models are distributed separately from the normal Git source checkout in the [GitHub v1.0.0 Reproducibility Release](https://github.com/Aquintoms/gaia-dr3-stellar-clustering-pipeline/releases/tag/v1.0.0).
+**Download the versioned artifacts:** The project data and fitted models are distributed separately from the normal Git source checkout in the [GitHub v1.0.1 Reproducibility Release](https://github.com/Aquintoms/gaia-dr3-stellar-clustering-pipeline/releases/tag/v1.0.1).
 
 The release contains four relevant assets:
 
