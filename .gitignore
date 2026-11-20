@@ -53,3 +53,5 @@ PRESENTATION/build/
 
 # Private presenter copy containing speaking notes/comments
 PRESENTATION/Gaia_DR3_Stellar_Clustering_Presentation.pdf
+# Local frontend backups
+frontend/backup-before-lights-out-*/
