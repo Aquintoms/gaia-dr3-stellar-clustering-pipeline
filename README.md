@@ -13,6 +13,51 @@ The project uses astronomy as its application domain. Its main focus is the repr
 - **Serving:** FastAPI, with a Docker Compose deployment.
 - **Python:** 3.12 (the validated project environment used Python 3.12.7).
 
+
+## System architecture
+
+The project has two main workflows: an offline pipeline for preparing the Gaia DR3 data and training the clustering models, and a containerized runtime service for querying the saved catalogue and making predictions.
+
+```mermaid
+flowchart TB
+    subgraph training["Offline data preparation and modelling"]
+        A["Gaia DR3 subset CSV<br/>DATA/gaia_subset_raw.csv"]
+        B["SCRIPTS/data_pipeline.py<br/>Quality checks and feature engineering"]
+        C[("Processed features<br/>DATA/processed/")]
+        D["SCRIPTS/train.py"]
+        E["StandardScaler<br/>Six ordered input features"]
+        F["K-Means<br/>Four clusters"]
+        G["UMAP<br/>Two-dimensional embedding"]
+        H["HDBSCAN<br/>26 non-noise clusters + noise"]
+        I[("MODEL/<br/>Scaler and fitted models")]
+        J[("OUTPUTS/<br/>Clustered catalogue, embeddings,<br/>summaries and evaluation metrics")]
+
+        A --> B --> C --> D --> E
+        E --> F
+        E --> G --> H
+        E --> I
+        F --> I
+        G --> I
+        H --> I
+        D --> J
+    end
+
+    subgraph serving["Containerized API and inference"]
+        K["Docker Compose"]
+        L["FastAPI service<br/>main.py"]
+        M["HTTP client"]
+        N["REST API endpoints<br/>Health, summary, model information,<br/>cluster browsing, star lookup and prediction"]
+
+        K --> L
+        I --> L
+        J --> L
+        M --> L
+        L --> N
+    end
+```
+
+**Training and inference distinction:** K-Means operates on the standardized six-feature representation, while HDBSCAN operates on the two-dimensional UMAP representation. The API loads the saved models and uses them for approximate assignment of new observations to existing fitted clusters; it does not retrain the models during prediction.
+
 ## Repository structure
 
 ```text
@@ -64,7 +109,7 @@ The BP/RP excess-factor interval was examined as a diagnostic, but it was **not*
 
 ### Feature engineering
 
-The pipeline derives distance, absolute G-band magnitude, total proper motion, tangential velocity, and Cartesian Galactic-position coordinates. The Cartesian coordinates are calculated using Astropy coordinate transformations.
+The pipeline derives distance, absolute G-band magnitude, total proper motion, tangential velocity, and heliocentric Cartesian coordinates in the ICRS frame. The Cartesian coordinates are calculated using Astropy coordinate transformations.
 
 The six model input features, in the required order, are:
 
